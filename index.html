@@ -1,7 +1,53 @@
-<!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
-</html>
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { RocketIcon, DollarSignIcon } from "lucide-react";
+
+export default function MemeCoinLandingPage() {
+  return (
+    <div className="min-h-screen bg-yellow-100 flex flex-col items-center justify-center px-4">
+      <div className="text-center max-w-2xl">
+        <h1 className="text-5xl font-bold mb-4 text-yellow-900">?? Welcome to BananaCoin</h1>
+        <p className="text-lg mb-6 text-yellow-800">
+          The most deliciously useless coin on the blockchain. Backed by 100% internet monkey memes.
+        </p>
+        <Button className="bg-yellow-500 hover:bg-yellow-600 text-white text-lg px-6 py-3 rounded-full shadow-lg">
+          Buy Now
+        </Button>
+      </div>
+
+      <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl">
+        <Card className="bg-white shadow-xl">
+          <CardContent className="p-6 text-center">
+            <RocketIcon className="mx-auto text-yellow-600 mb-4" size={48} />
+            <h2 className="text-xl font-semibold mb-2">Moon Potential</h2>
+            <p className="text-gray-700">We're going to the moon! Or maybe just your meme folder.</p>
+          </CardContent>
+        </Card>
+
+        <Card className="bg-white shadow-xl">
+          <CardContent className="p-6 text-center">
+            <DollarSignIcon className="mx-auto text-yellow-600 mb-4" size={48} />
+            <h2 className="text-xl font-semibold mb-2">Zero Utility</h2>
+            <p className="text-gray-700">Literally no use. But hey, neither does your favorite meme.</p>
+          </CardContent>
+        </Card>
+
+        <Card className="bg-white shadow-xl">
+          <CardContent className="p-6 text-center">
+            <img
+              src="/monkey-meme.png"
+              alt="Monkey Meme"
+              className="w-24 h-24 mx-auto mb-4 rounded-full"
+            />
+            <h2 className="text-xl font-semibold mb-2">Meme Backed</h2>
+            <p className="text-gray-700">Backed by the rarest internet bananas and monkey JPEGs.</p>
+          </CardContent>
+        </Card>
+      </div>
+
+      <footer className="mt-20 text-center text-yellow-700 text-sm">
+        © 2025 BananaCoin. Totally not financial advice.
+      </footer>
+    </div>
+  );
+}
